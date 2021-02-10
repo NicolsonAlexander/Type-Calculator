@@ -295,7 +295,7 @@ function makeOptions(){ //I used this to make the first dropdown list
 function makeImages(){
     var typeImages = "";
     for(var i = 0; i<typeNames.length; i++){
-        typeImages += "<img src=\"images/" + typeNames[i] + ".jpg\" alt=\"" + typeNames[i].capitalize() + "\">\n";
+        typeImages += "<img src=\"images/" + typeNames[i] + ".gif\" alt=\"" + typeNames[i].capitalize() + "\">\n";
     }
     return typeImages;
 }
@@ -354,9 +354,9 @@ Object.defineProperty(Array.prototype, "formatOut", {
                 }
                 else{
                     if(this.count(q)>1)
-                        result += "<img src=\"images/" + typeNames[q] + ".jpg\" alt=\"" + typeNames[q].capitalize() + " \">" + "x" + this.count(q) + " ";
+                        result += "<img src=\"images/" + typeNames[q] + ".gif\" alt=\"" + typeNames[q].capitalize() + " \">" + "x" + this.count(q) + " ";
                     else   
-                        result += "<img src=\"images/" + typeNames[q] + ".jpg\" alt=\"" + typeNames[q].capitalize() + " \">";
+                        result += "<img src=\"images/" + typeNames[q] + ".gif\" alt=\"" + typeNames[q].capitalize() + " \">";
                 }
             }
         }
@@ -374,7 +374,7 @@ Object.defineProperty(Array.prototype, "convertToImages", {
                 result += typeNames[this[i]].capitalize();
             }
             else{
-                result += "<img src=\"images/" + typeNames[this[i]] + ".jpg\" alt=\"" + typeNames[this[i]].capitalize() + " \">";
+                result += "<img src=\"images/" + typeNames[this[i]] + ".gif\" alt=\"" + typeNames[this[i]].capitalize() + " \">";
             }
         };
         return result;
