@@ -42,7 +42,7 @@ function Pokemon(arg){
 
 	this.calcWeakness = function(){
         var result = [];
-        for(i = 0; i<18; i++){
+        for(i = 0; i<19; i++){
             if(chart[type1][i] * chart[type2][i] >= 2){
                 result[result.length] = i;
             }
@@ -53,7 +53,7 @@ function Pokemon(arg){
 
 	this.calcResist = function(){
 		var result = [];
-        for(i = 0; i<18; i++){
+        for(i = 0; i<19; i++){
             if(chart[type1][i] * chart[type2][i] <= 0.5){
                 result[result.length] = i;
             }
@@ -204,7 +204,7 @@ function calculateTeam(){
 
     if(textOnly){
         var outstring = "";
-        for(var i=0; i<18; i++){
+        for(var i=0; i<19; i++){
             if(!team.resisted().contains(i)){
                  outstring += typeNames[i].capitalize() + ", ";
             }
@@ -214,7 +214,7 @@ function calculateTeam(){
     else{
         document.getElementById("unresisted").innerHTML =  "Un-Resisted: " + makeImages();
         var unResists = document.getElementById("unresisted").children;
-        for(var i=0; i<18; i++){
+        for(var i=0; i<19; i++){
             if(team.resisted().contains(i)){
                 unResists[i].style.opacity = 0.2;
             }
@@ -286,7 +286,7 @@ function List(){
 
 function makeOptions(){ //I used this to make the first dropdown list
 	list = "<option value=\"0\">None</option>\n";
-	for(i = 0; i<18; i++)
+	for(i = 0; i<19; i++)
 		list+="<option value=\""+ (i+1) + "\">"+ typeNames[i] +"</option>\n";
 	console.log(list);
 }
@@ -341,7 +341,7 @@ Object.defineProperty(Array.prototype, "copyFrom", {
 Object.defineProperty(Array.prototype, "formatOut", {
     value: function formatOut() {
         var result = "";
-        for(var q = 0; q<18; q++){
+        for(var q = 0; q<19; q++){
             if(this.contains(q)){
                 if(textOnly){
                     if (result!="")
